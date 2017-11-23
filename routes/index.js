@@ -14,7 +14,7 @@ router.get('/', (req, res, next) => {
   });
 });
 
-router.get('persona/nuevo', (req, res, next) =>{
+router.get('/persona/nuevo', (req, res, next) =>{
   res.render('personaForm', {});
 });
 
@@ -31,7 +31,7 @@ router.get('/persona/eliminar/:id', (req, res, next) =>{
   let idPersona = req.params.id;
   Persona.remove({_id: idPersona}, (err) => {
     if (err) throw err;
-    res.redirect('/');;
+    res.redirect('/');
   });
 });
 
