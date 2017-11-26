@@ -23,7 +23,7 @@ router.get('/persona/modificar/:id', (req, res, next) =>{
   Persona.findOne({_id: idPersona}, (err, persona) => {
     console.log(persona);
     if (err) throw err;
-    res.render('personaForm',{persona: persona});
+    res.render('personaForm',{ persona: persona });
   });
 });
 
